@@ -28,9 +28,10 @@ export default function Navbar({ toggleTheme, isDark }) {
                 color: 'var(--text)',
                 borderBottom: '1px solid rgba(0,0,0,0.1)',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+                overflowX: 'hidden',
             }}
         >
-            <div style={{ flex: 1, display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+            <div style={{ flex: 1, display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', }}>
                 {['home', 'about', 'projects', 'contact'].map((section) => (
                     <button
                         key={section}
@@ -56,7 +57,7 @@ export default function Navbar({ toggleTheme, isDark }) {
                     </button>
                 ))}
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end', flex: 1 }}>
+                <div style={{ marginLeft: 'auto' }}>
                     <button
                         onClick={toggleTheme}
                         style={{
