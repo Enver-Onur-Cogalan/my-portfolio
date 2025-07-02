@@ -22,7 +22,7 @@ Hello! I'm Onur. This project is my personal portfolio site that both tells my s
 - CSS Variables (for dark-light theme)
 - GitHub Pages / Vercel (publishing)
 
-## 🌍 Canlı Demo
+## 🌍 Live Demo
 
 🔗 [https://my-portfolio-qmuy.vercel.app](https://my-portfolio-qmuy.vercel.app)
 
