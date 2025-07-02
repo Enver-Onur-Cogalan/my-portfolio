@@ -50,7 +50,7 @@ const About = () => {
             >
                 <Feature icon={<FaNodeJs size={28} />} label='Node.js & Express' />
                 <Feature icon={<FaDatabase size={28} />} label='Database Management' />
-                <Feature icon={<FaDocker size={28} />} label='Using Docker' />
+                <Feature icon={<FaDocker size={28} />} label='Docker' />
                 <Feature icon={<FaLaptopCode size={28} />} label='Clean Code / API' />
             </div>
 
