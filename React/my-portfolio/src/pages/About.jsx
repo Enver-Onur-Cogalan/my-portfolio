@@ -34,6 +34,25 @@ const About = () => {
 
                 Bu yolculukta durmadan ilerliyor, tutkumu gerçek projelere taşıma yolunda sağlam adımlar atıyorum.
             </motion.p>
+
+            <a
+                href='/Enver-Onur-Cogalan-CV.pdf'
+                download
+                style={{
+                    display: 'inline-block',
+                    marginTop: '2rem',
+                    padding: '10px 20px',
+                    backgroundColor: '#0077ff',
+                    color: '#fff',
+                    borderRadius: '6px',
+                    textDecoration: 'none',
+                    transition: 'background-color 0.3s ease',
+                }}
+                onMouseEnter={e => (e.target.style.backgroundColor = '#005edc')}
+                onMouseLeave={e => (e.target.style.backgroundColor = '#0077ff')}
+            >
+                📄 CV’mi İndir
+            </a>
         </section>
     );
 };
