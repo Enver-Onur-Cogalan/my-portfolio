@@ -1,8 +1,13 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function ProjectCard({ project }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <motion.div
+            layout
+            onClick={() => setIsOpen(!isOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             initial={{ opacity: 0, y: 30 }}
@@ -21,28 +26,46 @@ export default function ProjectCard({ project }) {
                 cursor: 'pointer',
             }}
         >
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{project.title}</h3>
-            <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>{project.description}</p>
-            <div>
-                <a
-                    href={project.github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    style={{ marginRight: '1rem', color: '#007bff' }}
-                >
-                    GitHub
-                </a>
-                {project.demo && (
-                    <a
-                        href={project.demo}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        style={{ color: '#28a745' }}
+            <motion.h3 layout style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{project.title}</motion.h3>
+
+            <motion.p layout style={{ fontSize: '1rem' }}>
+                {project.short}
+            </motion.p>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        style={{ overflow: 'hidden', marginTop: '1rem' }}
                     >
-                        Demo
-                    </a>
+                        <p style={{ fontSize: '0.95rem' }}>{project.long}</p>
+                        <div style={{ marginTop: '0.8rem' }}>
+                            <a
+                                href={project.github}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                style={{ color: '#007bff', marginRight: '1rem' }}
+                            >
+                                GitHub
+                            </a>
+
+                            {project.demo && (
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ color: '#28a745' }}
+                                >
+                                    Demo
+                                </a>
+                            )}
+                        </div>
+                    </motion.div>
                 )}
-            </div>
+            </AnimatePresence>
         </motion.div>
     );
 }
