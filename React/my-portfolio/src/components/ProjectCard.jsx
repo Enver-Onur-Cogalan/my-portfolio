@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import MovingLines from './MovingLines';
 
 export default function ProjectCard({ project }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +16,18 @@ export default function ProjectCard({ project }) {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
             style={{
+                position: 'relative',
+                overflow: 'hidden',
                 backgroundColor: 'var(--bg)',
                 color: 'var(--text)',
                 border: '1px solid #ccc',
-                borderRadius: '10px',
-                padding: '20px',
-                margin: '10px',
-                maxWidth: '300px',
+                borderRadius: '12px',
+                padding: 20,
+                margin: 10,
+                maxWidth: 300,
                 boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                 cursor: 'pointer',
+                zIndex: 1,
             }}
         >
             <motion.h3 layout style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{project.title}</motion.h3>
@@ -66,6 +70,8 @@ export default function ProjectCard({ project }) {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            {isOpen && <MovingLines />}
         </motion.div>
     );
 }
