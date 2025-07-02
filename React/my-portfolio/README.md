@@ -1,12 +1,60 @@
-# React + Vite
+# 🧠 Onur Çoğalan - Personal Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hello! I'm Onur. This project is my personal portfolio site that both tells my software journey and showcases the projects I've done in a stylish way. A completely modern and animation-focused structure was created using **React.js**, **Framer Motion**, **React Icons** and **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ Fast and simple Vite-based structure
+- 🌗 Dark / Light theme support
+- 🎨 Dynamic animations with Framer Motion
+- 🧩 Detailed project cards that expand with Hover
+- 🔗 GitHub and live demo links
+- 📱 Mobile-friendly and responsive design
+- 📄 CV download feature
+- 💥 Special animations for icons (vibration effect)
 
-## Expanding the ESLint configuration
+## 🛠 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Vite
+- Framer Motion
+- React Icons
+- CSS Variables (for dark-light theme)
+- GitHub Pages / Vercel (publishing)
+
+## 🌍 Canlı Demo
+
+🔗 [https://my-portfolio-qmuy.vercel.app](https://my-portfolio-qmuy.vercel.app)
+
+## 📂 Project Folder Structure
+
+```bash
+my-portfolio/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── MovingLines.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Contact.jsx
+│   ├── data/
+│   │   └── projects.js
+│   ├── styles/
+│   │   └── global.css
+│   ├── index.css
+│   └── main.jsx
+├── public/
+│   └── Enver-Onur-Cogalan-CV.pdf
+└── README.md
+```
+
+## 💡 Why This Project?
+
+I developed this portfolio site to introduce myself in the software world, showcase my projects and make a great first impression. It's also a great playground to practice animation and UI/UX!
+
+---
+
+🖤 Thanks!
