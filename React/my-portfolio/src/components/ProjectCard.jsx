@@ -13,6 +13,7 @@ export default function ProjectCard({ project }) {
             whileTap={{ scale: 0.98 }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            animate={{ scale: isOpen ? 1.02 : 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
             style={{
@@ -25,7 +26,9 @@ export default function ProjectCard({ project }) {
                 padding: 20,
                 margin: 10,
                 maxWidth: 300,
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                boxShadow: isOpen
+                    ? '0 0 24px rgba(0, 120, 255, 0.3)'
+                    : '0 4px 12px rgba(0,0,0,0.1)',
                 cursor: 'pointer',
                 zIndex: 1,
             }}
@@ -51,7 +54,7 @@ export default function ProjectCard({ project }) {
                                 href={project.github}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                style={{ color: '#007bff', marginRight: '1rem' }}
+                                style={{ color: '#007bff', marginRight: '1rem', textDecoration: 'none', fontWeight: 500 }}
                             >
                                 GitHub
                             </a>
