@@ -74,4 +74,4 @@ export default function Navbar({ toggleTheme, isDark }) {
             </div>
         </nav>
     );
-}
+};
